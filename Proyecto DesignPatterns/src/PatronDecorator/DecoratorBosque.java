@@ -6,7 +6,6 @@ public class DecoratorBosque extends Decorator{
 		super(enemigo);
 		
 	}
-
 	
 	public void sonidoDeAtaque() {
 		super.enemigo.sonidoDeAtaque();
@@ -22,7 +21,6 @@ public class DecoratorBosque extends Decorator{
 		super.enemigo.sonidoDeDefendiendo();
 		System.out.println("Estamos en el bosque!!");
 	}
-
 
 
 }

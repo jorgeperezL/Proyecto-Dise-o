@@ -4,6 +4,10 @@ import PatronStrategy.*;
 
 public abstract class Enemigo {
 		
+		public final int ATACAR = 0;
+		public final int DEFENDER = 1;
+		public final int PASAR = 2;
+	
 		private Strategies algoritmo;
 		
 		private int fuerza;
@@ -67,7 +71,7 @@ public abstract class Enemigo {
 		
 		public int siguienteAccion() {
 			if(algoritmo.siguientAccion()==0) {
-				 this.atacar();
+				 return this.atacar();
 			}else if(algoritmo.siguientAccion()==1) {
 				 this.defender();
 			}else if(algoritmo.siguientAccion()==2) {

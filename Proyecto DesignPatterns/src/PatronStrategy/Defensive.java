@@ -1,11 +1,10 @@
 package PatronStrategy;
 
-
+import TemplatePattern.*;
 
 public class Defensive implements Strategies{
 
-
-	
+	private AccionadorDeEnemigos accionador = new Defensividad();
 	
 	public void executeType() {
 		
@@ -15,7 +14,7 @@ public class Defensive implements Strategies{
 	
 	public int siguientAccion() {
 		
-		return 1;
+		return accionador.siguienteAccion();
 		
 	}
 	
