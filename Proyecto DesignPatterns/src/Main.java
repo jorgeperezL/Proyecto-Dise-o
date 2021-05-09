@@ -87,27 +87,27 @@ public class Main {
         }
         
         
-//        //Strategy prueba
-//        Contexto c = new Contexto();
-//        
-//        Random aleatorio = new Random();
-//    	int n1 = aleatorio.nextInt(3);
-//    	
-//    	System.out.println(n1);
-//    	switch(n1) {
-//    	case 0:
-//    		c.setType(new Aggressive());
-//    		c.execute();
-//    	case 1: 
-//    		c.setType(new Defensive());
-//    		c.execute();
-//    	case 2:
-//    		c.setType(new Passive());
-//    		c.execute();
-//    	default:
-//    		System.out.println("ERROR!!!");
-//    		
-//    	}
+        //Strategy prueba
+        Contexto c = new Contexto();
+        
+        Random aleatorio = new Random();
+    	int n1 = aleatorio.nextInt(3);
+    	
+    	System.out.println(n1);
+    	switch(n1) {
+    	case 0:
+    		c.setType(new Aggressive());
+    		c.execute();
+    	case 1: 
+    		c.setType(new Defensive());
+    		c.execute();
+    	case 2:
+    		c.setType(new Passive());
+    		c.execute();
+    	default:
+    		System.out.println("ERROR!!!");
+    		
+    	}
       
     }
 
