@@ -1,14 +1,14 @@
 package PatronDecorator;
 
-public class DecoratorBosque extends Decorator{
+public class DecoratorEspadachin extends Decorator{
 
-	public DecoratorBosque(Enemigo enemigo) {
+	public DecoratorEspadachin(Enemigo enemigo) {
 		super(enemigo);
 		
 	}
 	
 	private void sonido() {
-		System.out.print("Estamos en el bosque. ");
+		System.out.print(" Tengo una arco. ");
 	}
 
 	@Override
@@ -45,10 +45,9 @@ public class DecoratorBosque extends Decorator{
 	public int queHacer() {
 		return super.enemigo.queHacer();
 	}
-	
+
 	@Override
 	public int getVida() {
 		return super.enemigo.getVida();
 	}
-	
 }

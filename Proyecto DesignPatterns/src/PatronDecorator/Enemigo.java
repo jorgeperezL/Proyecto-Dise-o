@@ -1,9 +1,12 @@
 package PatronDecorator;
 
 public interface Enemigo {
+	int atacar();
+	void defender();
 	
-
-	void sonidoDeAtaque();
-	void sonidoDeDefensa();
-	void sonidoDeDefendiendo();
+	void recivirAtaque(int danio) ;
+	
+	int queHacer();
+	int siguienteAccion();
+	int getVida();
 }

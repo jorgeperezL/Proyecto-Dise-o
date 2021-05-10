@@ -1,6 +1,6 @@
 package PatronDecorator;
 
-public class Vista implements Enemigo{
+public class Vista {
 
 	
 	public void sonidoDeAtaque() {
