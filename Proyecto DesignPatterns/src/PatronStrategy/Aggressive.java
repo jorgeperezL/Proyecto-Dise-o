@@ -1,10 +1,11 @@
 package PatronStrategy;
 
-
+import TemplatePattern.AccionadorDeEnemigos;
+import TemplatePattern.Agresividad;
 
 public class Aggressive implements Strategies{
 	
-	
+	private AccionadorDeEnemigos accionador = new Agresividad();
 	
 	public void executeType() {
 		
@@ -13,8 +14,7 @@ public class Aggressive implements Strategies{
 	
 	public int siguientAccion() {
 		
-		
-		return 0;
+		return accionador.siguienteAccion();
 		
 	}
 

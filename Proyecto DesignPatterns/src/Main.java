@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 import PatronAbstractFactory.*;
-import PatronAbstractFactory.Enemigo;
+import PatronAbstractFactory.EnemigoBasiquisimo;
 import PatronDecorator.*;
 import PatronStrategy.*;
 
@@ -49,65 +49,65 @@ public class Main {
         
         //Decorator prueba
         
+//        
+//        Vista vista = new Vista();
+//        
+//        DecoratorBosque db = new DecoratorBosque(vista);
+//        DecoratorDesierto dd = new DecoratorDesierto(vista);
+//        DecoratorSelva ds = new DecoratorSelva(vista);
+//        
+//        System.out.println("desierto, bosque o selva: ");
+//        String s1 = sc.nextLine();
+//        
+//        switch(s1) {
+//        
+//        case "desierto":
+//        	
+//        	dd.sonidoDeAtaque();
+//        	dd.sonidoDeDefensa();
+//        	dd.sonidoDeDefendiendo();
+//        	break;
+//        	
+//        case "bosque":
+//
+//        	db.sonidoDeAtaque();
+//        	db.sonidoDeDefensa();
+//        	db.sonidoDeDefendiendo();
+//        	break;
+//        	
+//        case "selva":
+//        	
+//        	ds.sonidoDeAtaque();
+//        	ds.sonidoDeDefensa();
+//        	ds.sonidoDeDefendiendo();
+//        	break;
+//        	
+//        default:
+//        	System.out.println("pon algo con sentido");
+//        }
+//        
         
-        Vista vista = new Vista();
-        
-        DecoratorBosque db = new DecoratorBosque(vista);
-        DecoratorDesierto dd = new DecoratorDesierto(vista);
-        DecoratorSelva ds = new DecoratorSelva(vista);
-        
-        System.out.println("desierto, bosque o selva: ");
-        String s1 = sc.nextLine();
-        
-        switch(s1) {
-        
-        case "desierto":
-        	
-        	dd.sonidoDeAtaque();
-        	dd.sonidoDeDefensa();
-        	dd.sonidoDeDefendiendo();
-        	break;
-        	
-        case "bosque":
-
-        	db.sonidoDeAtaque();
-        	db.sonidoDeDefensa();
-        	db.sonidoDeDefendiendo();
-        	break;
-        	
-        case "selva":
-        	
-        	ds.sonidoDeAtaque();
-        	ds.sonidoDeDefensa();
-        	ds.sonidoDeDefendiendo();
-        	break;
-        	
-        default:
-        	System.out.println("pon algo con sentido");
-        }
-        
-        
-        //Strategy prueba
-        Contexto c = new Contexto();
-        
-        Random aleatorio = new Random();
-    	int n1 = aleatorio.nextInt(3);
-    	
-    	System.out.println(n1);
-    	switch(n1) {
-    	case 0:
-    		c.setType(new Aggressive());
-    		c.execute();
-    	case 1: 
-    		c.setType(new Defensive());
-    		c.execute();
-    	case 2:
-    		c.setType(new Passive());
-    		c.execute();
-    	default:
-    		System.out.println("ERROR!!!");
-    		
-    	}
+//        //Strategy prueba
+//        Contexto c = new Contexto();
+//        
+//        Random aleatorio = new Random();
+//    	int n1 = aleatorio.nextInt(3);
+//    	
+//    	System.out.println(n1);
+//    	switch(n1) {
+//    	case 0:
+//    		c.setType(new Aggressive());
+//    		c.execute();
+//    	case 1: 
+//    		c.setType(new Defensive());
+//    		c.execute();
+//    	case 2:
+//    		c.setType(new Passive());
+//    		c.execute();
+//    	default:
+//    		System.out.println("ERROR!!!");
+//    		
+//    	}
       
     }
 

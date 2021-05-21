@@ -1,4 +1,5 @@
 package PatronAbstractFactory;
+import PatronDecorator.Enemigo;
 import PatronStrategy.*;
 public abstract class FabricaEnemigos {
 	public abstract Enemigo crearMago(int fuerza, int agilidad, int resistencia, Strategies algoritmo);
