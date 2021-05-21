@@ -1,11 +1,14 @@
 package PatronAbstractFactory;
+import PatronState.*;
 import PatronStrategy.*;
 
 
 public abstract class Enemigo {
 		
 		private Strategies algoritmo;
+		private EstadoJugador estado;
 		
+		private static final int VIDA=100;
 		private int fuerza;
 		private int agilidad;
 		private int resistencia;
@@ -21,6 +24,7 @@ public abstract class Enemigo {
 			this.resistencia = resistencia;
 			this.algoritmo=algoritmo;
 			this.defender = false;
+			this.estado=new Normal();
 			
 			generarVida();
 			generarAtaque();
@@ -31,12 +35,24 @@ public abstract class Enemigo {
 		abstract void sonidoDeDefendiendo();
 		
 		public void recivirAtaque(int danio) {
+			
 			if (!this.defender) {
 				this.vida -= danio;
-			}else {
+				
+				if(this.vida<80) {
+					this.estado=new Enfadado();
+				}
+				else if(this.vida<50) {
+					this.estado=new Herido();
+				
+				}
+			}
+			else {
 				sonidoDeDefendiendo();
 				this.defender = false;
 			}
+			
+			
 		}
 		
 		public int atacar() {
@@ -50,7 +66,8 @@ public abstract class Enemigo {
 		}
 		
 		private void generarVida() {
-			this.vida = agilidad + resistencia;
+			
+			this.vida=VIDA;
 		}
 		
 		private void generarAtaque() {
@@ -66,6 +83,9 @@ public abstract class Enemigo {
 		}
 		
 		public int siguienteAccion() {
+			
+			this.estado.mostrarEstado();
+			
 			if(algoritmo.siguientAccion()==0) {
 				 this.atacar();
 			}else if(algoritmo.siguientAccion()==1) {
@@ -75,5 +95,7 @@ public abstract class Enemigo {
 			}
 			return 0;
 		}
+		
+		
 }
 
