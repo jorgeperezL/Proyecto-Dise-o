@@ -1,63 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="PatronAbstractFactory.FabricaBosque" project="Proyecto DesignPatterns" 
-    file="/Proyecto DesignPatterns/src/PatronAbstractFactory/FabricaBosque.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1343" y="439"/>    
+  <class id="1" language="java" name="TemplatePattern.Defensividad" project="Proyecto DesignPatterns" 
+    file="/Proyecto DesignPatterns/src/TemplatePattern/Defensividad.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="229" x="231" y="617"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="PatronAbstractFactory.FabricaDesierto" project="Proyecto DesignPatterns" 
-    file="/Proyecto DesignPatterns/src/PatronAbstractFactory/FabricaDesierto.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="990" y="634"/>    
+  <class id="2" language="java" name="TemplatePattern.AccionadorDeEnemigos" project="Proyecto DesignPatterns" 
+    file="/Proyecto DesignPatterns/src/TemplatePattern/AccionadorDeEnemigos.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="393" width="234" x="500" y="184"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="PatronAbstractFactory.FabricaEnemigos" project="Proyecto DesignPatterns" 
-    file="/Proyecto DesignPatterns/src/PatronAbstractFactory/FabricaEnemigos.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1003" y="271"/>    
+  <class id="3" language="java" name="TemplatePattern.Agresividad" project="Proyecto DesignPatterns" 
+    file="/Proyecto DesignPatterns/src/TemplatePattern/Agresividad.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="229" x="500" y="617"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="PatronAbstractFactory.FabricaSelva" project="Proyecto DesignPatterns" 
-    file="/Proyecto DesignPatterns/src/PatronAbstractFactory/FabricaSelva.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="547" y="652"/>    
+  <class id="4" language="java" name="TemplatePattern.Passivo" project="Proyecto DesignPatterns" 
+    file="/Proyecto DesignPatterns/src/TemplatePattern/Passivo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="229" x="769" y="617"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="PatronAbstractFactory.EnemigoBasiquisimo" project="Proyecto DesignPatterns" 
-    file="/Proyecto DesignPatterns/src/PatronAbstractFactory/EnemigoBasiquisimo.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="520" width="269" x="346" y="10"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
+  <generalization id="5">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
   <generalization id="6">    
     <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="3"/>  
+    <end type="TARGET" refId="2"/>  
   </generalization>  
   <generalization id="7">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <generalization id="8">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="3"/>  
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
   </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    

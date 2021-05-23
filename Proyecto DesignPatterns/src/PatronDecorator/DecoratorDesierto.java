@@ -14,8 +14,7 @@ public class DecoratorDesierto extends Decorator{
 	@Override
 	public int atacar() {
 		sonido();
-		super.enemigo.atacar();
-		return 0;
+		return super.enemigo.atacar();
 	}
 
 	@Override
